@@ -1,88 +1,10 @@
-// //SELECTEURS
-document.querySelector("body"); //classe
-document.querySelector("#id"); //id
-
-//méthodes multiples : toutes les méthodes css dispo en JavaScrypt
-//document.querySelector("body").style.background = "yellow";
-//on peut donner cette valeur à une const
 const body = document.querySelector("body");
-const question1 = document.querySelector(".q1");
-const btn1 = document.querySelector("#btn1");
-const btn2 = document.querySelector("#btn2");
-// console.log(btn2); // toujours vérifier ses variables dans la console
-
-//question1.style.background = "red"; // .style.qqchose signifie qu'on peut utiliser tout de CSS
-//question1.style.transition = "0.5s ease";
-
-//click event :
-//question1.addEventListener('évènement en question', function) ;
-question1.addEventListener("click", () => {});
-
-btn1.addEventListener("click", () => {});
-
-//id > classe > balise html
-
-//_____________________________
-//Mouse event
-const mouseMove = document.querySelector(".mousemove");
-console.log(mouseMove);
-
-window.addEventListener("mousemove", (e) => {
-	//e de event : permet de récupérer toutes les données de l'évent
-	//console.log(e);
-	mouseMove.style.left = e.pageX - 25 + "px";
-	mouseMove.style.top = e.pageY - 25 + "px";
-});
-
-//quand on laisse appuyé sur la souris
-window.addEventListener("mousedown", () => {
-	mouseMove.style.transform = "scale(0.1)";
-});
-
-//quand on relâche la pression
-window.addEventListener("mouseup", () => {
-	mouseMove.style.transform = "scale(1)";
-});
-
-//quand on rentre dans une division
-question1.addEventListener("mouseenter", () => {
-	question1.style.background = "rgba(256,0,0,0.6)";
-});
-
-//quand on sort de la division
-question1.addEventListener("mouseout", () => {
-	question1.style.background = "rgba(256,0,0,1)";
-});
-
-//quand on passe sur un élément -> mouseover
-
-//___________________________________________________________
-//Scroll Event
-const nav = document.querySelector("nav");
-
-//pas de e en faisans le scroll.
-let pixelMemory = 0;
-window.addEventListener("scroll", () => {
-	//Print le nombre de pixel que la personne a scrollé pendant le scroll :
-	//console.log(window.scrollY);
-	console.log(pixelMemory);
-	let pixelTest = window.scrollY;
-	if (pixelTest > pixelMemory + 80) {
-		pixelMemory = pixelTest;
-		nav.style.top = -50 + "px";
-	} else if (pixelTest < pixelMemory - 120) {
-		pixelMemory = pixelTest;
-		nav.style.top = 0;
-	}
-});
+const titre = document.querySelector("titre");
 
 //_________________________________________
-//formulaire
-let nom = "";
-let language = "";
-const form = document.querySelector("form");
+//researchBar
+const researchBar = document.querySelector("researchBar");
 const inputName = document.querySelector('input[type="text"]');
-const select = document.querySelector("select");
 
 inputName.addEventListener("input", (e) => {
 	//console.log(e.target.value);
@@ -95,13 +17,13 @@ select.addEventListener("input", (e) => {
 	language = e.target.value;
 });
 
-form.addEventListener("submit", (e) => {
-	e.preventDefault(); // enlève le fait de changer de page en submittant le form
+researchBar.addEventListener("submit", (e) => {
+	e.preventDefault(); // enlève le fait de changer de page en submittant le researchBar
 	if (test.checked) {
 		//est ce que la checkbox est cochée, vrai pour le bouton aussi
 
-		//sélectionner une balise dans une autre balise \/ ici seul balise div dans form
-		document.querySelector("form > div").innerHTML = `
+		//sélectionner une balise dans une autre balise \/ ici seul balise div dans researchBar
+		document.querySelector("researchBar > div").innerHTML = `
 		<h3>Nom : ${nom}</h3>
 		<h4>Langage préféré : ${language}</h4>
 		`; // écrire directement dans une balise HTML
@@ -148,7 +70,7 @@ document.body.addEventListener(
 
 //_____________________________________________________
 //Stop propagation
-question1.addEventListener("click", (e) => {
+titre.addEventListener("click", (e) => {
 	alert("test");
 	e.stopPropagation(); //La sorti du click suivant est annulé
 });
