@@ -19,7 +19,7 @@ researchBar.addEventListener("submit", (e) => {
 	e.preventDefault(); 
 	// enlève le fait de changer de page en submittant le researchBar
 		document.querySelector(".researchBar > div").innerHTML = `
-		<h3>${research}</h3>
+		<a href="hello.txt" download>Download database</a>
 		`; // écrire directement dans une balise HTML
 
 });
