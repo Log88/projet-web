@@ -3,8 +3,10 @@ const titre = document.querySelector("titre");
 
 //_________________________________________
 //researchBar
-const researchBar = document.querySelector("researchBar");
+const researchBar = document.querySelector(".researchBar");
 const inputName = document.querySelector('input[type="text"]');
+
+let research = ""
 
 inputName.addEventListener("input", (e) => {
 	//console.log(e.target.value);
@@ -16,8 +18,8 @@ inputName.addEventListener("input", (e) => {
 researchBar.addEventListener("submit", (e) => {
 	e.preventDefault(); 
 	// enlève le fait de changer de page en submittant le researchBar
-		document.querySelector("researchBar > div").innerHTML = `
-		<h3>research : ${research}</h3>
+		document.querySelector(".researchBar > div").innerHTML = `
+		<h3>${research}</h3>
 		`; // écrire directement dans une balise HTML
 
 });
