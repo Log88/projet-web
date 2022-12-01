@@ -1,4 +1,4 @@
-//SELECTEURS
+// //SELECTEURS
 document.querySelector("body"); //classe
 document.querySelector("#id"); //id
 
@@ -9,19 +9,14 @@ const body = document.querySelector("body");
 const question1 = document.querySelector(".q1");
 const btn1 = document.querySelector("#btn1");
 const btn2 = document.querySelector("#btn2");
-console.log(btn2); // toujours vérifier ses variables dans la console
+// console.log(btn2); // toujours vérifier ses variables dans la console
 
 //question1.style.background = "red"; // .style.qqchose signifie qu'on peut utiliser tout de CSS
 //question1.style.transition = "0.5s ease";
 
 //click event :
 //question1.addEventListener('évènement en question', function) ;
-question1.addEventListener("click", () => {
-	console.log("Click !"); //toujours test pour voir si ça fonctionne
-	//question1.style.background = "white";
-	// en général on fait directement une classe sur CSS.
-	question1.classList.toggle("question-woop");
-});
+question1.addEventListener("click", () => {});
 
 btn1.addEventListener("click", () => {});
 
@@ -161,40 +156,40 @@ question1.addEventListener("click", (e) => {
 //_______________________________________________________
 // BOM : browser Object Model
 
-console.log(window.innerHeight);
-console.log(window.screenY);
-//window.open("http://google.com", "Andrea c cool"); //rediriger la personne vers une autre page web etc
+// console.log(window.innerHeight);
+// console.log(window.screenY);
+// window.open("http://google.com", "Andrea c cool"); //rediriger la personne vers une autre page web etc
 
 // Evenement addosé a Window:
 //alert();
-confirm("êtes vous sur ?");
-let answer = prompt("Salut à tous les amis");
-console.log(answer);
+// confirm("êtes vous sur ?");
+// let answer = prompt("Salut à tous les amis");
+// console.log(answer);
 
 //Timer, compte à rebour
-setTimeout(() => {
-	//logiqe à executer
-	console.log("ca f 10s");
-}, 10000); //Après 10 secondes on fait la logique
+// setTimeout(() => {
+// 	//logiqe à executer
+// 	console.log("ca f 10s");
+// }, 10000); //Après 10 secondes on fait la logique
 
-/* Time interval 
-let timeInterval = setInterval(() => {
-	document.body.innerHTML +=
-		"<div class='box'> <h2>Wesh comment tu vas ?</h2> </div>";
-}, 5000);
+// //  Time interval 
+// let timeInterval = setInterval(() => {
+// 	document.body.innerHTML +=
+// 		"<div class='box'> <h2>Wesh comment tu vas ?</h2> </div>";
+// }, 5000);
 
-window.addEventListener("click", () => {
-	clearInterval(timeInterval);
-});
-*/
+// window.addEventListener("click", () => {
+// 	clearInterval(timeInterval);
+// });
+
 
 //Location
-console.log(location.href);
-console.log(location.host);
-console.log(location.pathname);
-console.log(location.search);
+// console.log(location.href);
+// console.log(location.host);
+// console.log(location.pathname);
+// console.log(location.search);
 //console.log(location.replace("http://google.fr"));
 
 //Navigator
-console.log(navigator.userAgent);
-console.log(navigator.geolocation);
+// console.log(navigator.userAgent);
+// console.log(navigator.geolocation);
